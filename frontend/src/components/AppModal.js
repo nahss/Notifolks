@@ -39,7 +39,7 @@ const ConnectWalletModal = () => {
     });
 
     if (!connector.connected) {
-      console.log("Another one");
+      
       connector.createSession();
     }
 
@@ -48,7 +48,7 @@ const ConnectWalletModal = () => {
         throw error;
       }
 
-      console.log("Connected...");
+      
       const { accounts } = payload.params[0];
 
       localStorage.setItem("walletAddr", accounts[0]);
@@ -65,7 +65,7 @@ const ConnectWalletModal = () => {
         throw error;
       }
 
-      console.log("Session updated...");
+      
       const { accounts } = payload.params[0];
 
       localStorage.setItem("walletAddr", accounts[0]);
